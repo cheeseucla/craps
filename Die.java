@@ -10,7 +10,7 @@ public class Die{
     private int DieNum; 
 
     //constuctor(s)
-    public DieNum(){
+    public Die(){
         DieNum = (int)(Math.random() * 6 + 1);
     }
 
