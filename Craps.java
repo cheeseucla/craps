@@ -8,12 +8,17 @@ import java.util.*;
 public class Craps {
     public static void main(String[] args){
         boolean response = playGame();
-        if(response){
-            giveInstructions();
+        giveInstructions();
+        while(response){
             rollDie();
-        }
-        if(!response){
-
+            int ret = keepPlaying();
+            if(ret == 1){
+                response = true;
+            }
+            else{
+                response = false;
+                System.out.println("Thank you for playing");
+            }
         }
     }
 
@@ -55,10 +60,10 @@ public class Craps {
             if(total == 7 || total == 11){
                 System.out.println("You Win!");
             }
-            if(total == 2 || total == 3 || total == 12){
+            else if(total == 2 || total == 3 || total == 12){
                 System.out.println("You Lose :(");
             }
-            else{
+            else if(total == 1 || total == 4 || total == 5 || total == 6 || total == 8 || total == 9 || total == 10){
                 boolean alpha = true;
                 while(alpha){
                     System.out.println("Your point is: " + total);
@@ -85,4 +90,17 @@ public class Craps {
                 }
             }
         }
+    public static int keepPlaying(){
+        System.out.println("Would you like to play again (yes/no): ");
+        Scanner bu = new Scanner(System.in);
+        String again = bu.next();
+        int ret = 0;
+        if(again.equals("yes")){
+            ret = 1;
+        }
+        else{
+            ret = 2;
+        }
+        return ret;
+    }
 }
