@@ -4,7 +4,6 @@
  * @author Hudson Stimmler
  */
 
-import java.util.*;
 public class Die{
     //Fields
     private int DieNum; 
