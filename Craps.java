@@ -51,7 +51,7 @@ public class Craps {
         }
         else{}
     }
-    //the game itself
+    //the game 
     public static void rollDie(){
         //the users first roll
         Die a = new Die();
