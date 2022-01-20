@@ -104,7 +104,7 @@ public class Craps {
                 }
             }
         }
-    ////determines is the user wants to play again
+    //determines is the user wants to play again
     public static int keepPlaying(){
         System.out.println("Would you like to play again (yes/no): ");
         Scanner bu = new Scanner(System.in);
