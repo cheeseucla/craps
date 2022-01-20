@@ -9,11 +9,13 @@ public class Die{
     private int DieNum; 
 
     //constuctor(s)
+    //returns a number 1-6
     public Die(){
         DieNum = (int)(Math.random() * 6 + 1);
     }
 
     //methods
+    //Returns the number rolled with the Die
     public int getDie(){
         return DieNum;
     }
